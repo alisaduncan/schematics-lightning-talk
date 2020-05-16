@@ -7,22 +7,23 @@
 
 
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400&display=swap');
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #fbfbfb;
-$mainFont: 'Open Sans', sans-serif;
-$mainColor: #484848;// #333;
-$headingFont: 'Quicksand', sans-serif;
-$headingColor: #48466d; //#204969;
+$mainFont: 'Roboto', sans-serif;
+$mainColor: #4a5568;
+$headingFont: 'Nunito', sans-serif;
+$headingColor: #0097a7;
 // $headingColor: #756c83;
 $headingLetterSpacing: -0.05em;
 $headingTextShadow: none;
 
 $codeFont: 'Roboto Mono', monospace;
-$linkColor: #f38181;// #3b759e;
+$linkColor: #a1cb2c; //#71d4f1;
+
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
 
@@ -36,6 +37,12 @@ $heading4Size: 1.0em;
 	line-height: 1.3em;
 }
 
+.reveal .slides section.present.title {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .reveal .slides section.present {
   flex-direction: column;
   height: 80%;
@@ -46,47 +53,25 @@ $heading4Size: 1.0em;
 
   & > div.text-content {
     flex: 75%;
-  }
-}
-
-.reveal .slides section.present.title {
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.reveal .slides section.present.presenter {
-  flex-direction: column;
-  justify-content: space-between;
-  height: 90%;
-
-  & > .heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & > img {
-      border-radius: 50%;
-      margin: 0 0.5em;
-      width: 12%;
+    align-self: center;
+    & > * {
+      margin-bottom: 1em;
     }
   }
 
-  & > .about {
-    font-size: 80%;
+  & > div.power {
+    flex: 75%;
+
+    & > img {
+      width: 50%;
+      height: auto;
+    }
   }
+
+
 }
 
-.reveal .slides section.present.section-title {
-  height: 80%;
-  justify-content: center;
-  align-items: center;
 
-  h2 {
-    color: #fbfbfb;
-    flex: none;
-  }
-}
 
 section .multi-column {
   flex: 90%;
@@ -95,20 +80,8 @@ section .multi-column {
   align-items: flex-start;
   justify-content: space-evenly;
 
-  &.instructions {
-    & > .step {
-      text-align: left;
-      flex: 33%;
-      align-items: start;
-      font-size: 80%;
-    }
-
-    & > .output {
-      flex: 67%;
-    }
-  }
-
   &.image-right {
+    margin-top: 1em;
     & > .content {
       flex: 67%;
     }
@@ -116,6 +89,22 @@ section .multi-column {
     & > .image {
       flex: 33%;
       align-self: center;
+    }
+  }
+
+  &.equal {
+    margin-top: 1em;
+    & > .content {
+      flex: 50%;
+    }
+    & > .image {
+      flex: 50%;
+      align-self: center;
+
+      img {
+        margin: 0;
+        height: 75%;
+      }
     }
   }
 }
@@ -128,7 +117,7 @@ section .multi-column {
   display: none;
 }
 
-.reveal p code {
+.reveal .text-content li > code, .reveal .text-content p > code {
   letter-spacing: -0.08em;
   font-weight: 400;
   color: #333;

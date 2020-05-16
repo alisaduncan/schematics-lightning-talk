@@ -27,9 +27,105 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section class="title" data-background="https://media.giphy.com/media/xUA7b0Klw8Wfor7FWo/giphy.gif">
           <h1>Angular Schematics</h1>
-				</section>
+        </section>
+        <section>
+          <h2>What is it?</h2>
+          <div class="text-content">
+            <blockquote cite="https://angular.io/guide/schematics" >
+              A schematic is a template-based code generator that supports complex logic. It is a set of instructions for transforming a software project by generating or modifying code.
+            </blockquote>
+          </div>
+        </section>
+        <section>
+          <h2>Why do we want it?</h2>
+          <div class="text-content fragment">
+            <p>You've already used it. It allows us to make code changes very quickly.</p>
+            <img class="plain" src="https://media.giphy.com/media/5ts3wTHyJHHZRamago/giphy.gif" />
+          </div>
+        </section>
+        <section>
+          <h2>An example</h2>
+          <div class="text-content">
+            <code class="hljs bash">ng generate component my-component</code>
+            <p>What does this schematic do?</p>
+            <ul>
+              <li class="fragment">Creates an Angular component</li>
+              <li class="fragment">Imports the component into <code>AppModule</code></li>
+            </ul>
+
+          </div>
+        </section>
+        <section>
+          <h2>What else can schematics do?</h2>
+          <div class="text-content multi-column image-right">
+            <div class="content">
+              <ul>
+                <li class="fragment">Create a brand new Angular app using <code>ng new</code></li>
+                <li class="fragment">Add library dependencies using <code>ng add</code></li>
+                <li class="fragment">Update your app using <code>ng update</code></li>
+                <li class="fragment">Run schematics published by other groups, such as Angular Components</li>
+              </ul>
+            </div>
+            <div class="image">
+              <img class="plain fragment" src="https://i.imgflip.com/28j2cg.jpg"/>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>So much power!</h2>
+          <div class="power">
+            <img class="plain" src="https://media.giphy.com/media/26FPMoFGJlJQuwdzO/giphy.gif" />
+          </div>
+        </section>
+        <section>
+          <h2>Let's look a little closer at Material</h2>
+          <div class="text-content">
+            <p>Add Angular Material to your app</p>
+            <code class="hljs bash">ng add @angular/material</code>
+            <ul>
+              <li class="fragment">Update your project dependencies</li>
+              <li class="fragment">Add some fonts, icons, and styles</li>
+              <li class="fragment">Enable a theme and built-in animations</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>Adding a dashboard</h2>
+          <div class="text-content multi-column equal">
+            <div class="content">
+              <code class="hljs bash">ng generate @angular/material:dashboard my-dashboard-component</code>
+            </div>
+            <div class="image">
+              <img class="plain" src="img/dashboard.png" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>What else is available?</h2>
+          <div class="text-content">
+            <ul>
+              <li>Adding an address form</li>
+              <li>Adding navigation</li>
+              <li>Adding a table</li>
+              <li>Drag and drop support for creating an interactive to-do list</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>Ultimate productivity</h2>
+          <div class="text-content">
+            <img class="plain" src="https://angularkc.github.io/schematics-workshop-worksheet/assets/complete.gif" />
+          </div>
+        </section>
+        <section>
+          <h2>Lots of other schematics available!</h2>
+          <div class="text-content">
+            <p>Check out the <code>angular-cli-ghpages</code> schematic to help make deploying a breeze!</p>
+            <img class="plain" src="https://media.giphy.com/media/3l1BCHcA6vjc6D6ag4/giphy.gif" />
+          </div>
+        </section>
 			</div>
     </div>
 
@@ -44,8 +140,8 @@
 				pdfSeparateFragments: false,
 				hash: true,
 				preloadIframes: false,
-        display: 'flex',
         center: false,
+        display: 'flex',
         width: '100%',
         height: '100%',
 				dependencies: [
